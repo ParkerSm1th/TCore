@@ -1,0 +1,36 @@
+name: Core
+author: Staff
+main: Main
+main: us.tropicalisles.KitPVPVP.Main
+description: A custom version of Spigot and Bungee
+version: 0.1
+load: STARTUP
+commands:
+  gm:
+      aliases: [gamemode, gmc, gma, gms, gm, egmc, egma, egms, egm, build]
+  tp:
+    description: Teleport to a specific player!
+  heal:
+    description: Heal yourself or a specific player!
+  hubreload:
+    description: Reload your current Hub!
+  ping:
+    description: Ping players, or see your ping!
+  tpall:
+    description: Teleport all of the players in the lobby, to you!
+  top:
+    description: Get to the max block height easily!
+  fly:
+    description: Toggle your flight or others flight!
+  ci:
+    description: Clear your inventory!
+    aliases: [clear, clearinventory]
+  server:
+    description: Server Transporter
+    aliases: [hubt, transporter]
+  setrank:
+    description: Setrank.
+  whitelist:
+    description: Whitelist players.
+  damage:
+    description: No damage command.
