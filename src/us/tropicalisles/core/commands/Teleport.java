@@ -37,7 +37,7 @@ public class Teleport  implements Listener, CommandExecutor
 					p.teleport(targp);
 						UtilMethods.sendMessage(p, "Teleported to &6" + targp.getName());
 					}else{
-						UtilMethods.sendMessage(p, "That player is not online!");
+						UtilMethods.sendMessage(p, "That player is not online!!");
 					}
 				}else if(args.length > 1)
 				{
