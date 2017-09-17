@@ -1,0 +1,68 @@
+name: MysticalPrisons
+author: Staff
+main: Main
+description: A custom version of Spigot and Bungee
+version: 0.1
+commands:
+  gmc:
+    description: Change your GameMode to Creative
+    permission: mystical.gmc
+  gma:
+    description: Change your GameMode to Adventure
+    permission: mystical.gma
+  gms:
+    description: Change your GameMode to Survival
+    permission: mystical.gms
+  gmsp:
+    description: Change your GameMode to Spectator
+    permission: mystical.gmsp
+  tp:
+    description: Teleport to a specific player!
+    permission: mystical.tp
+  heal:
+    description: Heal yourself or a specific player!
+    permission: mystical.heal
+  strike:
+    description: Strike yourself or a specific location!
+    permission: mystical.strike
+  hubreload:
+    description: Reload your current Hub!
+    permission: mystical.hubreload
+  ping:
+    description: Ping players, or see your ping!
+    permission: mystical.ping
+  skull:
+    description: Get a specific player skull!
+    permission: mystical.skull
+  tpall:
+    description: Teleport all of the players in the lobby, to you!
+    permission: mystical.tpall
+  top:
+    description: Get to the max block height easily!
+    permission: mystical.top
+  near:
+    description: Get all the players within a 200 block radius!
+    permission: mystical.near
+  fly:
+    description: Toggle your flight or others flight!
+    permission: mystical.fly
+  ot:
+    description: Check the current online time of the server!
+    permission: mystical.ot
+    aliases: [online]
+  ci:
+    description: Clear your inventory!
+    permission: mystical.ci
+    aliases: [clear, clearinventory]
+  server:
+    description: Server Transporter
+    aliases: [hubt, transporter]
+  cps:
+    description: CPS check a player
+  gtc:
+    description: Give a specific player a specific treasure chest!
+  reload:
+    description: Reload the plugin
+    aliases: [rl, rel, mireload, mi-reload]
+  storage:
+    description: Storage plugin
