@@ -1,7 +1,7 @@
 name: Core
 author: Staff Team
 main: Main
-main: us.tropicalisles.KitPVPVP.Main
+main: us.tropicalisles.core.Main
 description: A custom version of Spigot and Bungee
 version: 0.1
 load: STARTUP
