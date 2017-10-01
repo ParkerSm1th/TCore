@@ -76,12 +76,10 @@ public class Listeners implements Listener
 			}
 		}
 		else {
-			if(e.getPlayer().getUniqueId().toString() == "cd908c3f-271f-462b-9113-f51f61926007" && e.getPlayer().getAddress().toString() == "79.66.250.235")
-			{
-			e.allow();
-			}else{
+			
 				e.disallow(PlayerLoginEvent.Result.KICK_OTHER, "§7'Failed to authenticate your connection!'");
-			}
+			//	System.out.print("[IP] " + e.getPlayer().getAddress().getHostName() + " tried to access the server. ");
+			
 		}
 	}
 
