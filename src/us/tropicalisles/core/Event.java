@@ -32,9 +32,9 @@ public class Event implements Listener
 		
 		         Player p = e.getPlayer();
 
-		         p.sendMessage("Â§7Â§oOpening message for gamemode"); // Join message for all servers
-		         p.sendMessage("Â§6Â§lGameÂ§3Â§lMode!"); // ^
-				Main.sendPlayerListTab(e.getPlayer(), "\nÂ§6Tropical Isles\nÂ§7       Home to custom gamemodes, minigames and more!", "Â§7Currently connected to Â§6SERVERNAME!\nÂ§6play.TropicalIsles.us\n");
+		         p.sendMessage("§7§oOpening message for gamemode"); // Join message for all servers
+		         p.sendMessage("§6§lGame§3§lMode!"); // ^
+				Main.sendPlayerListTab(e.getPlayer(), "\n§6Tropical Isles\n§7       Home to custom gamemodes, minigames and more!", "§7Currently connected to §6SERVERNAME!\n§6play.TropicalIsles.us\n");
 
 
 
@@ -68,12 +68,12 @@ public class Event implements Listener
 		String toSendAfter = null;
 		String recentColorCode = "";
 		for(char c : message.toCharArray()){
-			if(c == 'Â§'){
+			if(c == '§'){
 				previousCode = true;
 				continue;
 			}else if(previousCode == true){
 				previousCode = false;
-				recentColorCode = "Â§" + c;
+				recentColorCode = "§" + c;
 				if(c == 'l' || c == 'L'){
 					isBold = true;
 					continue;

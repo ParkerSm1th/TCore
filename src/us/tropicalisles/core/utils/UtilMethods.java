@@ -52,7 +52,7 @@ public void sendActionbar(Player p, String message) {
 
 	public static void sendMessage(CommandSender sender, String message) {
 
-		sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6Tropical Isles &8Â» &7" + message));
+		sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6Tropical Isles &8» &7" + message));
 
 	}
 
@@ -77,7 +77,7 @@ public void sendActionbar(Player p, String message) {
 		for (int i = 0; i < j; i++)
 		{
 			char c = arrayOfChar[i];
-			if (c == 'Â§')
+			if (c == '§')
 			{
 				previousCode = true;
 			}
@@ -86,7 +86,7 @@ public void sendActionbar(Player p, String message) {
 				if (previousCode)
 				{
 					previousCode = false;
-					recentColorCode = "Â§" + c;
+					recentColorCode = "§" + c;
 					if ((c == 'l') || (c == 'L'))
 					{
 						isBold = true;
