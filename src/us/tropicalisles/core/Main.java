@@ -71,7 +71,7 @@ public void onEnable()
 	if (service == null) {
 		// zPermissions not found, do something else
 	}
-	System.out.print("Â§eTropicalIsles Core was successfully enabled for SERVER!");
+	System.out.print("§eTropicalIsles Core was successfully enabled for SERVER!");
 	
 	
 	 Bukkit.getScheduler().scheduleSyncDelayedTask(this, new Runnable()
@@ -90,16 +90,15 @@ public void onEnable()
 	     
 	      }
 	    }, 20L);
-	Bukkit.getServer().broadcastMessage("Â§7Â§o[" + "CONSOLE" + "Â§7: Â§aProcessing..Â§7Â§o]");
-	Bukkit.getServer().broadcastMessage("Â§7Â§o[" + "CONSOLE" + "Â§7: Â§aData Upload CompleteÂ§7Â§o]");
-	Bukkit.getServer().broadcastMessage("Â§7Â§o[" + "CONSOLE" + "Â§7: Â§aRank Load CompleteÂ§7Â§o]");
-	Bukkit.getServer().broadcastMessage("Â§7Â§o[" + "CONSOLE" + "Â§7: Â§aUpdate CompleteÂ§7Â§o]");
-	Bukkit.getServer().broadcastMessage("Â§7Â§o[" + "CONSOLE" + "Â§7: Â§aPlease wait until reload completes to use commandsÂ§7Â§o]");
+	Bukkit.getServer().broadcastMessage("§7§o[" + "CONSOLE" + "§7: §aProcessing..§7§o]");
+	Bukkit.getServer().broadcastMessage("§7§o[" + "CONSOLE" + "§7: §aData Upload Complete§7§o]");
+	Bukkit.getServer().broadcastMessage("§7§o[" + "CONSOLE" + "§7: §aRank Load Complete§7§o]");
+	Bukkit.getServer().broadcastMessage("§7§o[" + "CONSOLE" + "§7: §aUpdate Complete§7§o]");
+	Bukkit.getServer().broadcastMessage("§7§o[" + "CONSOLE" + "§7: §aPlease wait until reload completes to use commands§7§o]");
 
 	 pm.registerEvents(this, this);
 	 pm.registerEvents(new Listeners(), this);
 	 pm.registerEvents(new Transporter(), this);
-	 pm.registerEvents(new Event(), this);
 	 pm.registerEvents(new ChatFormat(), this);
 	 pm.registerEvents(new CommandBypass(), this);
 
@@ -125,7 +124,7 @@ public void onEnable()
 public void onDisable()
 
 {
-	System.out.print("Â§eTropicalIsles Core was successfully disabled for SERVER!");
+	System.out.print("§eTropicalIsles Core was successfully disabled for SERVER!");
 
 	for(Player player : Bukkit.getOnlinePlayers())
 	{

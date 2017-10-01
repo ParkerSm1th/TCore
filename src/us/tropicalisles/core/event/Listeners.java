@@ -228,6 +228,7 @@ public class Listeners implements Listener
 
 		skulls.add(CraftItemStack.asNMSCopy(s));
 
+		Main.sendPlayerListTab(e.getPlayer(), "§6§lTropical Isles", "§7Currently connected to §6SERVERNAME!\n§6play.TropicalIsles.us\n");
 
 
 
