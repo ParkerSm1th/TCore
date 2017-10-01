@@ -50,7 +50,7 @@ public class Listeners implements Listener
 	public static ArrayList<net.minecraft.server.v1_8_R3.ItemStack> skulls;
 
 
-	@EventHandler(priority=EventPriority.HIGHEST)
+/*	@EventHandler(priority=EventPriority.HIGHEST)
 	public void onPlayerLogin(PlayerLoginEvent e)
 	{
 		String ip = e.getHostname().toString().split(":")[0];
@@ -67,7 +67,7 @@ public class Listeners implements Listener
 				if (whiteList.contains(e.getPlayer().getUniqueId().toString())) {
 					e.allow();
 				} else {
-					e.disallow(PlayerLoginEvent.Result.KICK_OTHER, "Â§7'You are not whitelisted on this server!'");
+					e.disallow(PlayerLoginEvent.Result.KICK_OTHER, "§7'You are not whitelisted on this server!'");
 				}
 			}
 			else {
@@ -75,9 +75,9 @@ public class Listeners implements Listener
 			}
 		}
 		else {
-			e.disallow(PlayerLoginEvent.Result.KICK_OTHER, "Â§7'Failed to authenticate your connection!'");
+			e.disallow(PlayerLoginEvent.Result.KICK_OTHER, "§7'Failed to authenticate your connection!'");
 		}
-	}
+	}*/
 
 
 	@EventHandler
@@ -217,18 +217,18 @@ public class Listeners implements Listener
 		SkullMeta meta = (SkullMeta)s.getItemMeta();
 		meta.setDisplayName("§e§lFRIENDS");
 		meta.setLore(	Arrays.asList(" ",
-				"Â§7Friend people using our ",
-				"Â§7Friend system! They will get",
-				"Â§7notified upon your join, and more!",
-				"Â§8Right click to get started!",
+				"§7Friend people using our ",
+				"§7Friend system! They will get",
+				"§7notified upon your join, and more!",
+				"§8Right click to get started!",
 				" ",
-				"Â§eClick to open up your Friend Menu!"));
+				"§eClick to open up your Friend Menu!"));
 		meta.setOwner("MHF_QUESTION");
 		s.setItemMeta(meta);
 
 		skulls.add(CraftItemStack.asNMSCopy(s));
 
-		Main.sendPlayerListTab(e.getPlayer(), "§6§lTropical Isles", "§7Currently connected to §6SERVERNAME!\n§6play.TropicalIsles.us\n");
+		Main.sendPlayerListTab(e.getPlayer(), "§6§lTropical Isles", "\n§7Currently connected to §6SERVERNAME!\n§6play.TropicalIsles.us\n");
 
 
 
