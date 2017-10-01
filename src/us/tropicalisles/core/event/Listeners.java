@@ -124,76 +124,88 @@ public class Listeners implements Listener
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent e)
 	{
-		final Player player = e.getPlayer();
+		final Player p = e.getPlayer();
 
 
-		if(player.getName().equalsIgnoreCase("Spoogo"))
+		if(UtilMethods.getGroupsForPlayer(p).contains("developer"))
 		{
-		player.sendMessage("[DEPLOY] " + Bukkit.getVersion());
+			p.setPlayerListName("§5§lDEV §7" + p.getName());
+	
+		}else if(UtilMethods.getGroupsForPlayer(p).contains("admin"))
+		{
+			p.setPlayerListName("§c§lADMIN §7" + p.getName());
+			
+		}else if(UtilMethods.getGroupsForPlayer(p).contains("owner"))
+		{
+			p.setPlayerListName("§c§lOWNER §7" + p.getName());
+			
+		}else if(UtilMethods.getGroupsForPlayer(p).contains("founder"))
+		{
+			p.setPlayerListName("§c§lFOUNDER §7" + p.getName());
+			
+		}else if(UtilMethods.getGroupsForPlayer(p).contains("builder"))
+		{
+			p.setPlayerListName("§d§lBUILDER §7" + p.getName());
+			
+		}else if(UtilMethods.getGroupsForPlayer(p).contains("mod"))
+		{
+			p.setPlayerListName("§a§lMOD §7" + p.getName());
+			
+		}else if(UtilMethods.getGroupsForPlayer(p).contains("helper"))
+		{
+			p.setPlayerListName("§e§lHELPER §7" + p.getName());
+			
+		}else if(UtilMethods.getGroupsForPlayer(p).contains("vip"))
+		{
+			p.setPlayerListName("§a§lVIP §7" + p.getName());
+			
+		}else if(UtilMethods.getGroupsForPlayer(p).contains("vip+"))
+		{
+			p.setPlayerListName("§a§lVIP+ §7" + p.getName());
+			
+		}else if(UtilMethods.getGroupsForPlayer(p).contains("elite"))
+		{
+			p.setPlayerListName("§e§lELITE §7" + p.getName());
+			
+		}else if(UtilMethods.getGroupsForPlayer(p).contains("legend"))
+		{
+			p.setPlayerListName("§6§lLEGEND §7" + p.getName());
+			
+		}else if(UtilMethods.getGroupsForPlayer(p).contains("master"))
+		{
+			p.setPlayerListName("§6§lMASTER §7" + p.getName());
+			
+		}else if(UtilMethods.getGroupsForPlayer(p).contains("youtuber"))
+		{
+			p.setPlayerListName("§f§lY§c§lT §7" + p.getName());
+			
+		}
+		
+		if(!UtilMethods.getGroupsForPlayer(p).contains("helper") 
+				&& !UtilMethods.getGroupsForPlayer(p).contains("mod")
+&& !UtilMethods.getGroupsForPlayer(p).contains("helper")
+&& !UtilMethods.getGroupsForPlayer(p).contains("builder")
+&& !UtilMethods.getGroupsForPlayer(p).contains("owner")
+&& !UtilMethods.getGroupsForPlayer(p).contains("admin")
+&& !UtilMethods.getGroupsForPlayer(p).contains("founder")
+&& !UtilMethods.getGroupsForPlayer(p).contains("vip")
+&& !UtilMethods.getGroupsForPlayer(p).contains("vip+")
+&& !UtilMethods.getGroupsForPlayer(p).contains("elite")
+&& !UtilMethods.getGroupsForPlayer(p).contains("legend")
+&& !UtilMethods.getGroupsForPlayer(p).contains("master")
+&& !UtilMethods.getGroupsForPlayer(p).contains("youtuber")
+&& !UtilMethods.getGroupsForPlayer(p).contains("developer"))
+		{
+		
+		
+			p.setPlayerListName("§7" + p.getName());
+			
 		}
 
 
-			Set<String> rank = UtilMethods.getGroupsForPlayer(player);
-
-			if(rank.contains("developer"))
-			{
-				player.setPlayerListName("Â§5Â§lDeveloper Â§7" + player.getName());
-
-			}else if(rank.contains("admin"))
-			{
-				player.setPlayerListName("Â§cÂ§lAdmin Â§7" + player.getName());
-
-			}else if(rank.contains("owner"))
-			{
-				player.setPlayerListName("Â§3Â§lOwner Â§7" + player.getName());
-
-			}else if(rank.contains("builder"))
-			{
-				player.setPlayerListName("Â§6Â§lBuilder Â§7" + player.getName());
-
-			}else if(rank.contains("mod"))
-			{
-				player.setPlayerListName("Â§bÂ§lMod Â§7" + player.getName());
-
-			}else if(rank.contains("helper"))
-			{
-				player.setPlayerListName("Â§eÂ§lHelper Â§7" + player.getName());
-
-			}else if(rank.contains("designer"))
-			{
-				player.setPlayerListName("Â§dÂ§lDesigner Â§7" + player.getName());
-
-			}else if(rank.contains("manager"))
-			{
-				player.setPlayerListName("Â§aÂ§lManager Â§7" + player.getName());
-			}else if(rank.contains("trial-staff"))
-			{
-				player.setPlayerListName("Â§eÂ§lTrial-Staff Â§7" + player.getName());
-			}else if(rank.contains("youtuber"))
-			{
-				player.setPlayerListName("Â§cÂ§lYouÂ§fÂ§lTube Â§7" + player.getName());
-			}
-			if(!rank.contains("helper")
-					&& !rank.contains("mod")
-					&& !rank.contains("trial-staff")
-					&& !rank.contains("builder")
-					&& !rank.contains("owner")
-					&& !rank.contains("admin")
-					&& !rank.contains("developer")
-					&& !rank.contains("manager")
-					&& !rank.contains("designer")
-					&& !rank.contains("youtuber"))
-			{
 
 
-				player.setPlayerListName("Â§7" + player.getName());
-
-			}
-
-
-
-
-		player.setGameMode(GameMode.SURVIVAL);
+		p.setGameMode(GameMode.SURVIVAL);
 
 		e.setJoinMessage(null);
 
@@ -203,7 +215,7 @@ public class Listeners implements Listener
 
 		org.bukkit.inventory.ItemStack s = new org.bukkit.inventory.ItemStack(Material.SKULL_ITEM, 1, (short)3);
 		SkullMeta meta = (SkullMeta)s.getItemMeta();
-		meta.setDisplayName("Â§eÂ§lFRIENDS");
+		meta.setDisplayName("§e§lFRIENDS");
 		meta.setLore(	Arrays.asList(" ",
 				"Â§7Friend people using our ",
 				"Â§7Friend system! They will get",
