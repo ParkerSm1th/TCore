@@ -1,76 +1,94 @@
 package us.tropicalisles.core.event;
 
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
-import org.tyrannyofheaven.bukkit.zPermissions.ZPermissionsCore;
-import us.tropicalisles.core.utils.NickAPI;
+
 import us.tropicalisles.core.utils.UtilMethods;
 
-import java.util.Set;
-
 public class ChatFormat implements Listener {
-
-    @EventHandler
-    public void chatFormat(AsyncPlayerChatEvent e) {
-
-        Player p = e.getPlayer();
-/* if(NickAPI.isNicked(p.getUniqueId()))
- {
-     e.setFormat("Â§7" + NickAPI.getNickName(p.getUniqueId()) + "Â§8: Â§7" + e.getMessage().replace("%", "%%"));
-
- }else {
-*/
-     Set<String> rank = UtilMethods.getGroupsForPlayer(p);
-
-     if (rank.contains("developer")) {
-         e.setFormat("Â§5Â§lDeveloper Â§7" + p.getName() + "Â§8: Â§d" + e.getMessage().replace("%", "%%"));
-
-     } else if (rank.contains("admin")) {
-         e.setFormat("Â§cÂ§lAdmin Â§7" + p.getName() + "Â§8: Â§c" + e.getMessage().replace("%", "%%"));
-
-     } else if (rank.contains("owner")) {
-         e.setFormat("Â§3Â§lOwner Â§7" + p.getName() + "Â§8: Â§3" + e.getMessage().replace("%", "%%"));
-
-     } else if (rank.contains("builder")) {
-         e.setFormat("Â§6Â§lBuilder Â§7" + p.getName() + "Â§8: Â§6" + e.getMessage().replace("%", "%%"));
-
-     } else if (rank.contains("mod")) {
-         e.setFormat("Â§bÂ§lModerator Â§7" + p.getName() + "Â§8: Â§b" + e.getMessage().replace("%", "%%"));
-
-     } else if (rank.contains("helper")) {
-         e.setFormat("Â§eÂ§lHelper Â§7" + p.getName() + "Â§8: Â§e" + e.getMessage().replace("%", "%%"));
-
-     } else if (rank.contains("designer")) {
-         e.setFormat("Â§dÂ§lDesigner Â§7" + p.getName() + "Â§8: Â§d" + e.getMessage().replace("%", "%%"));
-
-     } else if (rank.contains("manager")) {
-         e.setFormat("Â§aÂ§lManager Â§7" + p.getName() + "Â§8: Â§a" + e.getMessage().replace("%", "%%"));
-
-     } else if (rank.contains("youtuber")) {
-         e.setFormat("Â§cÂ§lYouÂ§fÂ§lTube Â§7" + p.getName() + "Â§8: Â§f" + e.getMessage().replace("%", "%%"));
-
-     }
-
-     if (!rank.contains("helper")
-             && !rank.contains("mod")
-             && !rank.contains("trial-staff")
-             && !rank.contains("builder")
-             && !rank.contains("owner")
-             && !rank.contains("admin")
-             && !rank.contains("developer")
-             && !rank.contains("manager")
-             && !rank.contains("designer")
-             && !rank.contains("youtuber")) {
-
-
-         e.setFormat("Â§7" + p.getName() + "Â§8: Â§7" + e.getMessage().replace("%", "%%"));
-
-     }
-
-
+	@EventHandler
+	public void redo(AsyncPlayerChatEvent e)
+	{
+		Player p = e.getPlayer();
+			
+			
+					if(UtilMethods.getGroupsForPlayer(p).contains("developer"))
+					{
+						e.setFormat("§5§lDEV §7" + p.getName() + "§7: §f" + e.getMessage().replace("%", "%%"));
+				
+					}else if(UtilMethods.getGroupsForPlayer(p).contains("admin"))
+					{
+						e.setFormat("§c§lADMIN §7" + p.getName() +  "§7: §f" + e.getMessage().replace("%", "%%"));
+				
+					}else if(UtilMethods.getGroupsForPlayer(p).contains("owner"))
+					{
+						e.setFormat("§c§lOWNER §7" + p.getName() +  "§7: §f" + e.getMessage().replace("%", "%%"));
+				
+					}else if(UtilMethods.getGroupsForPlayer(p).contains("founder"))
+					{
+						e.setFormat("§c§lFOUNDER §7" + p.getName() +  "§7: §f" + e.getMessage().replace("%", "%%"));
+				
+					}else if(UtilMethods.getGroupsForPlayer(p).contains("builder"))
+					{
+						e.setFormat("§d§lBUILDER §7" + p.getName() + "§7: §f" + e.getMessage().replace("%", "%%"));
+				
+					}else if(UtilMethods.getGroupsForPlayer(p).contains("mod"))
+					{
+						e.setFormat("§a§lMOD §7" + p.getName() + "§7: §f" + e.getMessage().replace("%", "%%"));
+				
+					}else if(UtilMethods.getGroupsForPlayer(p).contains("helper"))
+					{
+						e.setFormat("§e§lHELPER §7" + p.getName() + "§7: §f" + e.getMessage().replace("%", "%%"));
+				
+					}else if(UtilMethods.getGroupsForPlayer(p).contains("vip"))
+					{
+						e.setFormat("§a§lVIP §7" + p.getName() + "§7: §f" + e.getMessage().replace("%", "%%"));
+				
+					}else if(UtilMethods.getGroupsForPlayer(p).contains("vip+"))
+					{
+						e.setFormat("§a§lVIP+ §7" + p.getName() + "§7: §f" + e.getMessage().replace("%", "%%"));
+				
+					}else if(UtilMethods.getGroupsForPlayer(p).contains("elite"))
+					{
+						e.setFormat("§e§lELITE §7" + p.getName() + "§7: §f" + e.getMessage().replace("%", "%%"));
+				
+					}else if(UtilMethods.getGroupsForPlayer(p).contains("legend"))
+					{
+						e.setFormat("§6§lLEGEND §7" + p.getName() + "§7: §f" + e.getMessage().replace("%", "%%"));
+				
+					}else if(UtilMethods.getGroupsForPlayer(p).contains("master"))
+					{
+						e.setFormat("§6§lMASTER §7" + p.getName() + "§7: §f" + e.getMessage().replace("%", "%%"));
+				
+					}else if(UtilMethods.getGroupsForPlayer(p).contains("youtuber"))
+					{
+						e.setFormat("§f§lYOU§c§lTUBE §7" + p.getName() + "§7: §f" + e.getMessage().replace("%", "%%"));
+				
+					}
+					
+					if(!UtilMethods.getGroupsForPlayer(p).contains("helper") 
+							&& !UtilMethods.getGroupsForPlayer(p).contains("mod")
+ && !UtilMethods.getGroupsForPlayer(p).contains("helper")
+ && !UtilMethods.getGroupsForPlayer(p).contains("builder")
+ && !UtilMethods.getGroupsForPlayer(p).contains("owner")
+ && !UtilMethods.getGroupsForPlayer(p).contains("admin")
+ && !UtilMethods.getGroupsForPlayer(p).contains("founder")
+ && !UtilMethods.getGroupsForPlayer(p).contains("vip")
+ && !UtilMethods.getGroupsForPlayer(p).contains("vip+")
+ && !UtilMethods.getGroupsForPlayer(p).contains("elite")
+ && !UtilMethods.getGroupsForPlayer(p).contains("legend")
+ && !UtilMethods.getGroupsForPlayer(p).contains("master")
+ && !UtilMethods.getGroupsForPlayer(p).contains("youtuber")
+ && !UtilMethods.getGroupsForPlayer(p).contains("developer"))
+					{
+					
+					
+						e.setFormat("§7" + p.getName() + "§7: " + e.getMessage().replace("%", "%%"));
+						
+					}
+					
 
 
     }

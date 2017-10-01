@@ -62,13 +62,7 @@ public class Listeners implements Listener
 		boolean whiteListEnabled = filez.getBoolean("whitelist.on");
 		if ((ip.contains("play.tropicalisles.us")) && (port == 25565))
 		{
-			if ((e.getPlayer().getUniqueId().toString().equalsIgnoreCase("3e998529-bf61-4e56-9488-532a60284c59")) ||
-					(e.getPlayer().getUniqueId().toString().equalsIgnoreCase("c27ebb4c-ea84-4d7e-8995-e2189314a567")) ||
-					(e.getPlayer().getUniqueId().toString().equalsIgnoreCase("f89b27bc-18fb-42df-81da-f53a27b461ec")) ||
-					(e.getPlayer().getUniqueId().toString().equalsIgnoreCase("af587375-dd51-4a40-aba0-7a71b1c9fe7e")) ||
-					(e.getPlayer().getUniqueId().toString().equalsIgnoreCase("2d8f76af-83b7-41c7-8077-23e0e5650a12"))) {
-				e.disallow(PlayerLoginEvent.Result.KICK_OTHER, "§7'I suggest you remove the plugin otherwise legal action!'");
-			} else if (whiteListEnabled == true)
+			if (whiteListEnabled == true)
 			{
 				if (whiteList.contains(e.getPlayer().getUniqueId().toString())) {
 					e.allow();
