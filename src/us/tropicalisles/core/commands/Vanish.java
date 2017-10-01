@@ -1,14 +1,12 @@
 package us.tropicalisles.core.commands;
 
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
-import us.tropicalisles.core.utils.UtilMethods;
 
-import java.util.ArrayList;
+import us.tropicalisles.core.utils.UtilMethods;
 
 public class Vanish implements Listener, CommandExecutor
 {
@@ -26,7 +24,8 @@ public class Vanish implements Listener, CommandExecutor
 					|| UtilMethods.getGroupsForPlayer(p).contains("youtuber")
 					|| UtilMethods.getGroupsForPlayer(p).contains("builder"))
 			{
-
+                   
+			
 
 
 

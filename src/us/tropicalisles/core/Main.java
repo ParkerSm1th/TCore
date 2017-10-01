@@ -122,7 +122,7 @@ public void onEnable()
 	
 	for(Player player : Bukkit.getOnlinePlayers())
 	{
-		Main.sendPlayerListTab(player, "§6§lTropical Isles", "\n§7Currently connected to §6SERVERNAME!\n§6play.TropicalIsles.us\n");
+		Main.sendPlayerListTab(player, "\n§6§lTropical Isles\n ", "\n§7Currently connected to §6SERVERNAME!\n§6play.TropicalIsles.us\n");
 
 	}
 }

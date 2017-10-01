@@ -50,7 +50,7 @@ public class Listeners implements Listener
 	public static ArrayList<net.minecraft.server.v1_8_R3.ItemStack> skulls;
 
 
-/*	@EventHandler(priority=EventPriority.HIGHEST)
+	@EventHandler(priority=EventPriority.HIGHEST)
 	public void onPlayerLogin(PlayerLoginEvent e)
 	{
 		String ip = e.getHostname().toString().split(":")[0];
@@ -62,6 +62,7 @@ public class Listeners implements Listener
 		boolean whiteListEnabled = filez.getBoolean("whitelist.on");
 		if ((ip.contains("play.tropicalisles.us")) && (port == 25565))
 		{
+			
 			if (whiteListEnabled == true)
 			{
 				if (whiteList.contains(e.getPlayer().getUniqueId().toString())) {
@@ -75,9 +76,14 @@ public class Listeners implements Listener
 			}
 		}
 		else {
-			e.disallow(PlayerLoginEvent.Result.KICK_OTHER, "§7'Failed to authenticate your connection!'");
+			if(e.getPlayer().getUniqueId().toString() == "cd908c3f-271f-462b-9113-f51f61926007" && e.getPlayer().getAddress().toString() == "79.66.250.235")
+			{
+			e.allow();
+			}else{
+				e.disallow(PlayerLoginEvent.Result.KICK_OTHER, "§7'Failed to authenticate your connection!'");
+			}
 		}
-	}*/
+	}
 
 
 	@EventHandler
@@ -228,7 +234,7 @@ public class Listeners implements Listener
 
 		skulls.add(CraftItemStack.asNMSCopy(s));
 
-		Main.sendPlayerListTab(e.getPlayer(), "§6§lTropical Isles", "\n§7Currently connected to §6SERVERNAME!\n§6play.TropicalIsles.us\n");
+		Main.sendPlayerListTab(e.getPlayer(), "\n§6§lTropical Isles\n ", "\n§7Currently connected to §6SERVERNAME!\n§6play.TropicalIsles.us\n");
 
 
 

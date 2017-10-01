@@ -22,10 +22,10 @@ implements Listener, CommandExecutor
 					|| UtilMethods.getGroupsForPlayer(p).contains("owner")
 					|| UtilMethods.getGroupsForPlayer(p).contains("admin"))
 			{
-				Bukkit.broadcastMessage("Â§c** LOBBY RELOADED **");
-				Bukkit.broadcastMessage("Â§7Players were kicked as the lobby was reloaded!");
+				Bukkit.broadcastMessage("§c** LOBBY RELOADED **");
+				Bukkit.broadcastMessage("§7Players were kicked as the lobby was reloaded!");
 				Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "rl");
-				String kickReason = args.length > 0 ? getFinalArg(args, 0) : "Â§cThe lobby you were in was reloaded!";
+				String kickReason = args.length > 0 ? getFinalArg(args, 0) : "§cThe lobby you were in was reloaded!";
 				for(Player onlinePlayer : Bukkit.getOnlinePlayers())
 				{
 					if(onlinePlayer.isOp() || onlinePlayer.hasPermission("mystical.hubreload"))

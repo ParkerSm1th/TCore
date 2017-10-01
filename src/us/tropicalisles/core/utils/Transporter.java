@@ -29,7 +29,7 @@ public class Transporter
 	public static void serverTransporter(Player p)
 	{
 
-		Inventory i = Bukkit.createInventory(null, 54, "Â§8Â§nTransporter");
+		Inventory i = Bukkit.createInventory(null, 54, "§8§nTransporter");
 		ItemStack a = new ItemStack(Material.DIAMOND_SWORD);
 		ItemStack b = new ItemStack(Material.BOAT);
 		ItemStack c = new ItemStack(Material.DIAMOND_PICKAXE);
@@ -51,99 +51,99 @@ public class Transporter
 
 		bm.addEnchant(Enchantment.DURABILITY, 10, true);
 		bm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		bm.setDisplayName("Â§aÂ§lARCADE");
+		bm.setDisplayName("§a§lARCADE");
 		bm.setLore(
 				Arrays.asList(" ",
-						"Â§7Travel to the arcade where you can ",
-						"Â§7play our custom minigames, such",
-						"Â§7as Skywars, Model Mayhem and more. ",
-						"Â§7Buy perks, kits and more!",
-						"Â§8Featuring famous minigames!",
+						"§7Travel to the arcade where you can ",
+						"§7play our custom minigames, such",
+						"§7as Skywars, Model Mayhem and more. ",
+						"§7Buy perks, kits and more!",
+						"§8Featuring famous minigames!",
 						" ",
-						"Â§eThis gametype is currently under development!"));
+						"§eThis gametype is currently under development!"));
 
 
 		b.setItemMeta(bm);
 
 		am.addEnchant(Enchantment.DURABILITY, 10, true);
 		am.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		am.setDisplayName("Â§eÂ§lFACTIONS");
+		am.setDisplayName("§e§lFACTIONS");
 		am.setLore(
 				Arrays.asList(" ",
-						"Â§7Travel to the factions where you ",
-						"Â§7have to setup or join a faction/gang. ",
-						"Â§7You can either be a leader or a member, ",
-						"Â§7where you raid other people's bases!",
-						"Â§8Featuring custom features!",
+						"§7Travel to the factions where you ",
+						"§7have to setup or join a faction/gang. ",
+						"§7You can either be a leader or a member, ",
+						"§7where you raid other people's bases!",
+						"§8Featuring custom features!",
 						" ",
-						"Â§eThis gametype is currently under development!"));
+						"§eThis gametype is currently under development!"));
 
 		a.setItemMeta(am);
 
 		lm.addEnchant(Enchantment.DURABILITY, 10, true);
 		lm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		lm.setDisplayName("Â§9Â§lKITPVP");
+		lm.setDisplayName("§9§lKITPVP");
 		lm.setLore(
 				Arrays.asList(" ",
-						"Â§7Travel to the factions where you ",
-						"Â§7have to setup or join a faction/gang. ",
-						"Â§7You can either be a leader or a member, ",
-						"Â§7where you raid other people's bases!",
-						"Â§8Featuring custom features!",
+						"§7Travel to the factions where you ",
+						"§7have to setup or join a faction/gang. ",
+						"§7You can either be a leader or a member, ",
+						"§7where you raid other people's bases!",
+						"§8Featuring custom features!",
 						" ",
-						"Â§eClick to connect to this gamemode!"));
+						"§eClick to connect to this gamemode!"));
 
 		l.setItemMeta(lm);
 
 		cm.addEnchant(Enchantment.DURABILITY, 10, true);
 		cm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		cm.setDisplayName("Â§bÂ§lPRISON");
+		cm.setDisplayName("§b§lPRISON");
 		cm.setLore(
 				Arrays.asList(" ",
-						"Â§7Travel to the prison where you ",
-						"Â§7have to mine to keep your reputation. ",
-						"Â§7Visit other islands and complete quests. ",
-						"Â§7Battle the pirates to take over the island.",
-						"Â§8Will you mine enough blocks!",
+						"§7Travel to the prison where you ",
+						"§7have to mine to keep your reputation. ",
+						"§7Visit other islands and complete quests. ",
+						"§7Battle the pirates to take over the island.",
+						"§8Will you mine enough blocks!",
 						" ",
-						"Â§eThis gametype is currently under development!"));
+						"§eThis gametype is currently under development!"));
 
 		c.setItemMeta(cm);
 
 		dm.addEnchant(Enchantment.DURABILITY, 10, true);
 		dm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		dm.setDisplayName("Â§6Â§lSKYBLOCK");
+		dm.setDisplayName("§6§lSKYBLOCK");
 		dm.setLore(
 				Arrays.asList(" ",
-						"Â§7Travel to the skyblock where you ",
-						"Â§7have to survive on your own or with ",
-						"Â§7a friend in the sky! Buy and sell things ",
-						"Â§7but be careful who you trade with!",
-						"Â§8Want to play multiplayer? You can!",
+						"§7Travel to the skyblock where you ",
+						"§7have to survive on your own or with ",
+						"§7a friend in the sky! Buy and sell things ",
+						"§7but be careful who you trade with!",
+						"§8Want to play multiplayer? You can!",
 						" ",
-						"Â§eClick to connect to this gamemode!"));
+						"§eClick to connect to this gamemode!"));
 
 		d.setItemMeta(dm);
 
 		em.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		em.setDisplayName("Â§dÂ§lPARTY");
+		em.setDisplayName("§d§lPARTY");
 		em.setLore(
 				Arrays.asList(" ",
-						"Â§7Create a party with your friends ",
-						"Â§7and they will join any server/game you join!",
+						"§7Create a party with your friends ",
+						"§7and they will join any server/game you join!",
 						" ",
-						"Â§eClick to create or add members to your party!"));
+						"§eClick to create or add members to your party!"));
 
 		e.setItemMeta(em);
 
 		fm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		fm.setDisplayName("Â§6Â§lHUB");
+		fm.setDisplayName("§6§lHUB");
 		fm.setLore(
 				Arrays.asList(" ",
-						"Â§7Return to the Hub server! ",
-						"Â§7",
+						"§7Return to the Hub server! ",
+						"§7",
 						" ",
-						"Â§eClick to return to the Hub!"));
+						"§eClick to return to the Hub!"));
 
 		f.setItemMeta(fm);
 
@@ -162,9 +162,9 @@ public class Transporter
 		}else{
 			gm.setOwner("MHF_Question");
 			gm.addItemFlags(new ItemFlag[] { ItemFlag.HIDE_ENCHANTS });
-			gm.setDisplayName("Â§eÂ§lFRIENDS");
+			gm.setDisplayName("§e§lFRIENDS");
 			gm.setLore(
-					Arrays.asList(new String[] { " ", "Â§7Friend people using our ", "Â§7Friend system! They will get", "Â§7notified upon your join, and more!", "Â§8Right click to get started!", " ", "Â§eClick to open up your Friend Menu!" }));
+					Arrays.asList(new String[] { " ", "§7Friend people using our ", "§7Friend system! They will get", "§7notified upon your join, and more!", "§8Right click to get started!", " ", "§eClick to open up your Friend Menu!" }));
 
 			g.setItemMeta(gm);
 			i.setItem(50, g);
@@ -217,7 +217,7 @@ public class Transporter
 
 	public static void playerSettings(Player p)
 	{
-		Inventory i = Bukkit.createInventory(null, 27, "Â§8Â§nPlayer Settings");
+		Inventory i = Bukkit.createInventory(null, 27, "§8§nPlayer Settings");
 		ItemStack a = new ItemStack(Material.INK_SACK, 1, (short) 1);
 		ItemStack b = new ItemStack(Material.INK_SACK, 1, (short) 1);
 		ItemStack c = new ItemStack(Material.INK_SACK, 1, (short) 10);
@@ -233,28 +233,28 @@ public class Transporter
 
 		bm.addEnchant(Enchantment.DURABILITY, 10, true);
 		bm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		bm.setDisplayName("Â§cÂ§lDisable Speed");
+		bm.setDisplayName("§c§lDisable Speed");
 
 
 		b.setItemMeta(bm);
 
 		cm.addEnchant(Enchantment.DURABILITY, 10, true);
 		cm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		cm.setDisplayName("Â§aÂ§lEnable Speed");
+		cm.setDisplayName("§a§lEnable Speed");
 
 
 		c.setItemMeta(cm);
 
 		am.addEnchant(Enchantment.DURABILITY, 10, true);
 		am.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		am.setDisplayName("Â§cÂ§lVanish Players");
+		am.setDisplayName("§c§lVanish Players");
 
 
 		a.setItemMeta(am);
 
 		dm.addEnchant(Enchantment.DURABILITY, 10, true);
 		dm.addItemFlags(ItemFlag.HIDE_ENCHANTS);
-		dm.setDisplayName("Â§aÂ§lReveal Players");
+		dm.setDisplayName("§a§lReveal Players");
 
 
 		d.setItemMeta(dm);
@@ -320,7 +320,7 @@ public class Transporter
 			out.writeUTF("skyblock");
 			player.sendPluginMessage(JavaPlugin.getPlugin(Main.class), "BungeeCord", out.toByteArray());
 			e.getWhoClicked().closeInventory();
-			UtilMethods.sendMessage(player, "Sending to Â§6Skyblock&7...");
+			UtilMethods.sendMessage(player, "Sending to §6Skyblock&7...");
 		}
 
 	}
@@ -341,7 +341,7 @@ public class Transporter
 			out.writeUTF("kitpvp");
 			player.sendPluginMessage(JavaPlugin.getPlugin(Main.class), "BungeeCord", out.toByteArray());
 			e.getWhoClicked().closeInventory();
-			UtilMethods.sendMessage(player, "Sending to Â§6KitPVP&7...");
+			UtilMethods.sendMessage(player, "Sending to §6KitPVP&7...");
 		}
 
 	}
@@ -422,7 +422,7 @@ public class Transporter
 			out.writeUTF("hub");
 			player.sendPluginMessage(JavaPlugin.getPlugin(Main.class), "BungeeCord", out.toByteArray());
 			e.getWhoClicked().closeInventory();
-			UtilMethods.sendMessage(player, "Sending to Â§6Hub&7...");
+			UtilMethods.sendMessage(player, "Sending to §6Hub&7...");
 		}
 
 	}
